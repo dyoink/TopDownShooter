@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 46d9b92f79b9bf14ba2729c1e17bf16d
+timeCreated: 1468162134
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66932
+  packageName: 2d Flat Explosion
+  packageVersion: 1.0
+  assetPath: Assets/ToonExplosion v1.0/Animations/Explosion.anim
+  uploadId: 126576

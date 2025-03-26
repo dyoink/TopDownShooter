@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b185c1a9cf067374586d095111b15bd1
+timeCreated: 1468178952
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 66932
+  packageName: 2d Flat Explosion
+  packageVersion: 1.0
+  assetPath: Assets/ToonExplosion v1.0/Prefabs/Explosion.prefab
+  uploadId: 126576
