@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projectile
+  - Asteroid
   layers:
   - Default
   - TransparentFX
@@ -13,10 +14,10 @@ TagManager:
   - Water
   - UI
   - Enemy
-  - Player
+  - Bullet
   - Explose
-  - 
-  - 
+  - Asteroids
+  - Player
   - 
   - 
   - 
@@ -48,11 +49,17 @@ TagManager:
   - name: Enemy
     uniqueID: 917422819
     locked: 0
+  - name: Asteroid
+    uniqueID: 2009974281
+    locked: 0
   - name: Player
     uniqueID: 2120027703
     locked: 0
   - name: Item
     uniqueID: 2871526541
+    locked: 0
+  - name: New Layer 6
+    uniqueID: 2473003871
     locked: 0
   m_RenderingLayers:
   - Default

@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     private GameManager gameManager;
     private SpriteRenderer sr;
-    public GameObject explosePrefab;
+    public GameObject enemyExplosePrefab;
     private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private int HP;
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     {
         gameManager = GameManager.instance;
         rb = GetComponent<Rigidbody2D>();
-        GetPlayerPos();
+        
         sr = GetComponent<SpriteRenderer>();
 
     }
@@ -22,26 +22,33 @@ public class Enemy : MonoBehaviour
     {
         GetPlayerPos();
         Rotate();
+        
+    }
+    private void FixedUpdate()
+    {
         AutoMove();
     }
     private void GetPlayerPos()
     {
-        gameManager.player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerPos = gameManager.player;
+        gameManager.playerIsChased = GameObject.FindGameObjectWithTag("Player").transform;
+        playerPos = gameManager.playerIsChased;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Bullet bullet = collision.GetComponent<Bullet>();
         if (bullet != null)
         {
-            GameObject explose = Instantiate(explosePrefab, transform.position, Quaternion.identity);
-            Destroy(bullet.gameObject);
-            Destroy(explose,.5f);
-            HP--;
-            if (HP <= 0)
-            {
-                Destroy(gameObject);
-            }
+            GetDMG();
+        }
+    }
+    private void GetDMG()
+    {
+        HP--;
+        if (HP <= 0)
+        {
+            Destroy(gameObject);
+            GameObject enemyExplose = Instantiate(enemyExplosePrefab, transform.position, Quaternion.identity);
+            
         }
     }
     private void AutoMove()

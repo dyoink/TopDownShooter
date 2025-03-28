@@ -39,7 +39,7 @@ public class CustomPointer : MonoBehaviour {
 	}
 	
 	void Start () {
-		Screen.lockCursor = true;
+		Cursor.visible = true;
 		
 		deadzone_rect = new Rect((Screen.width / 2) - (deadzone_radius), (Screen.height / 2) - (deadzone_radius), deadzone_radius * 2, deadzone_radius * 2);
 	
@@ -51,7 +51,7 @@ public class CustomPointer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Screen.lockCursor = true;
+		Cursor.visible = true;
 		if (use_mouse_input) {
 		
 			float x_axis = Input.GetAxis("Mouse X");
