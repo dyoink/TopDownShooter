@@ -80,6 +80,7 @@ public class Player : MonoBehaviour
             rb.constraints = RigidbodyConstraints2D.None;
             if (!isRotate)
             {
+                GetDMG(1);
                 StartCoroutine(StopRotateAfterTime(rotateDuration));
             }
         }
